@@ -19,15 +19,6 @@ mongoose.connect(dbConfig.url).then(() => {
     console.log('Could not connect to the database. Exiting now...')
 })
 
-// mongoose.connection.on('error', function() {
-//     console.log('Could not connect to the database. Exiting now...')
-//     process.exit()
-// })
-
-// mongoose.connection.once('open', function() {
-//     console.log("Successfully connected to the database")
-// })
-
 app.get('/', function(req, res) {
     res.json({message: "Welcome to Student's Info application. Create, update, fetch and delete student using MongoDB", endPoints: listEndPoints(app)})
 })
